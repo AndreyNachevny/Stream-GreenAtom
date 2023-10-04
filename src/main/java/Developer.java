@@ -38,6 +38,7 @@ public class Developer {
                 .values().stream()
                 .filter(dev -> dev.size() == 1)
                 .flatMap(Collection::stream)
+                .distinct()
                 .collect(Collectors.toList());
         developers.forEach(dev -> System.out.println(dev.getName()));
     }
